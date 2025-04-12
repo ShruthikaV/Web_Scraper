@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Copy Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Analyze Web Page Copy</h1>
+        <form method="POST">
+            <div class="input-group">
+                <input type="text" name="url" placeholder="Paste a webpage URL..." required>
+                <button type="submit">Analyze</button>
+            </div>
+        </form>
+        <div class="output">
+            <h2>📝 Summary</h2>
+            <div class="summary-box">{{ summary|safe }}</div>
+        </div>
+    </div>
+</body>
+</html>
